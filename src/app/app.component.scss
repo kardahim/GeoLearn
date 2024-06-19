@@ -1,0 +1,11 @@
+@import "./assets/scss/variables.scss";
+
+.app {
+  min-height: 100vh;
+  display: flex;
+
+  &__content {
+    background-color: $color-primary;
+    flex: 1;
+  }
+}
