@@ -26,6 +26,7 @@
     font-weight: bold;
 
     &__item {
+      color: $color-primary;
       cursor: pointer;
       height: 50px;
       display: flex;
