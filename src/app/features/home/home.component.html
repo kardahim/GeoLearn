@@ -1,1 +1,8 @@
-<p>home works!</p>
+<main class="home">
+  <div class="home__country" *ngFor="let country of countryList">
+    <div class="home__country__flag">
+      <img src="{{ country.flagURL }}" alt="{{ country.flagDescription }}" />
+    </div>
+    <div class="home__country__name">{{ country.countryName }}</div>
+  </div>
+</main>
