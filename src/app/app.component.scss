@@ -8,5 +8,9 @@
     background-color: $color-primary;
     flex: 1;
     margin-left: 200px;
+
+    router-outlet {
+      margin: 0;
+    }
   }
 }

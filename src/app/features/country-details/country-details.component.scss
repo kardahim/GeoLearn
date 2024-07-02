@@ -1,0 +1,33 @@
+@import "../../assets/scss/variables.scss";
+
+.country {
+  width: calc(100% - 2 * 50px); // full table width - horizontal margins
+  border-collapse: collapse;
+  margin: 50px;
+
+  &__details {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+
+    &__row {
+      border-bottom: 1px solid #ddd;
+
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+      }
+
+      td {
+        vertical-align: top;
+      }
+    }
+  }
+}

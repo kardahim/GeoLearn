@@ -1,5 +1,9 @@
 <main class="home">
-  <div class="home__country" *ngFor="let country of countryList">
+  <div
+    class="home__country"
+    *ngFor="let country of countryList"
+    (click)="navigateToCountryDetails(country.countryName)"
+  >
     <div class="home__country__flag">
       <img src="{{ country.flagURL }}" alt="{{ country.flagDescription }}" />
     </div>

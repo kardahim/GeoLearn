@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ICountryList } from './interfaces/ICountryList';
 import { NgFor } from '@angular/common';
 import { CountryService } from '../../shared/services/country.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,7 @@ import { CountryService } from '../../shared/services/country.service';
 export class HomeComponent implements OnInit {
   countryList: ICountryList[] = [];
 
-  constructor(private countryService: CountryService) {}
+  constructor(private countryService: CountryService, private router: Router) {}
 
   ngOnInit() {
     // fill the countryList array
@@ -25,5 +26,9 @@ export class HomeComponent implements OnInit {
         };
       });
     });
+  }
+
+  navigateToCountryDetails(countryName: string) {
+    this.router.navigate([`/country/${countryName}`]);
   }
 }
